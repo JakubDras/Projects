@@ -75,7 +75,7 @@ with tf.device('/GPU:0'):
     x = layers.Conv2D(250, (4, 4), padding='same')(inputs)
     x = layers.BatchNormalization()(x)
     x = layers.Activation('relu')(x)
-    x = layers.SpatialDropout2D(0.40)(x)  # Zmiana Dropout na SpatialDropout2D
+    x = layers.SpatialDropout2D(0.40)(x)
 
     x = layers.Conv2D(250, (3, 3), padding='same')(x)
     x = layers.BatchNormalization()(x)
